@@ -1,11 +1,13 @@
 import { useAdminStore } from "medusa-react"
 import React, { useEffect, useState } from "react"
 import Medusa from "../../../services/api"
+import CashIcon from "../../fundamentals/icons/cash-icon"
 import CustomerIcon from "../../fundamentals/icons/customer-icon"
 import DollarSignIcon from "../../fundamentals/icons/dollar-sign-icon"
 import GearIcon from "../../fundamentals/icons/gear-icon"
 import GiftIcon from "../../fundamentals/icons/gift-icon"
 import PercentIcon from "../../fundamentals/icons/percent-icon"
+import SaleIcon from "../../fundamentals/icons/sale-icon"
 import TagIcon from "../../fundamentals/icons/tag-icon"
 import SidebarCompanyLogo from "../../molecules/sidebar-company-logo"
 import SidebarMenuItem from "../../molecules/sidebar-menu-item"
@@ -41,7 +43,7 @@ const Sidebar: React.FC = () => {
   triggerHandler.id = 0
 
   return (
-    <div className="min-w-sidebar max-w-sidebar h-screen overflow-y-scroll bg-gray-0 border-r border-grey-20 py-base px-base">
+    <div className="min-w-sidebar max-w-sidebar h-screen overflow-y-auto bg-gray-0 border-r border-grey-20 py-base px-base">
       <div className="h-full ">
         <SidebarCompanyLogo storeName={store?.name} />
 
@@ -66,15 +68,21 @@ const Sidebar: React.FC = () => {
           />
           <SidebarMenuItem
             pageLink={"/a/discounts"}
-            icon={<PercentIcon size={ICON_SIZE} />}
+            icon={<SaleIcon size={ICON_SIZE} />}
             triggerHandler={triggerHandler}
-            text={"Discounts"}
+            text={"Promotions"}
           />
           <SidebarMenuItem
             pageLink={"/a/gift-cards"}
             icon={<GiftIcon size={ICON_SIZE} />}
             triggerHandler={triggerHandler}
             text={"Gift Cards"}
+          />
+          <SidebarMenuItem
+            pageLink={"/a/pricing"}
+            icon={<CashIcon size={ICON_SIZE} />}
+            triggerHandler={triggerHandler}
+            text={"Pricing"}
           />
           <SidebarMenuItem
             pageLink={"/a/settings"}
