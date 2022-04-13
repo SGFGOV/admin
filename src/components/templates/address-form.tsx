@@ -84,6 +84,15 @@ const AddressForm = ({
           required={true}
           name={`${[type]}.phone`}
         />
+        <Input
+          ref={form.register({
+            required: true,
+          })}
+          placeholder="GSTIN"
+          label="GST Number"
+          required={true}
+          name={`${[type]}.gstin`}
+        />
       </div>
 
       <span className="inter-base-semibold">{`${

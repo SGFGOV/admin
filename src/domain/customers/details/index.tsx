@@ -85,6 +85,12 @@ const CustomerDetail: React.FC<CustomerDetailProps> = ({ id }) => {
             </div>
           </div>
           <div className="flex flex-col pl-6">
+            <div className="inter-smaller-regular text-grey-50 mb-1">GST Number</div>
+            <div className="truncate max-w-[200px]">
+              {customer?.gstin || "N/A"}
+            </div>
+          </div>
+          <div className="flex flex-col pl-6">
             <div className="inter-smaller-regular text-grey-50 mb-1">
               Orders
             </div>

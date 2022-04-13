@@ -198,6 +198,13 @@ const DraftOrderDetails = ({ id }) => {
                 </div>
                 <div className="flex flex-col pl-6">
                   <div className="inter-smaller-regular text-grey-50 mb-1">
+                    GSTIN
+                  </div>
+                  <div>{cart?.shipping_address?.gstin || ""}</div>
+                </div>
+                
+                <div className="flex flex-col pl-6">
+                  <div className="inter-smaller-regular text-grey-50 mb-1">
                     Amount ({region?.currency_code.toUpperCase()})
                   </div>
                   <div>
@@ -432,6 +439,7 @@ const DraftOrderDetails = ({ id }) => {
                     <div className="flex flex-col inter-small-regular">
                       <span>{cart?.email}</span>
                       <span>{cart?.shipping_address?.phone || ""}</span>
+                      <span>{cart?.shipping_address?.gstin || ""}</span>
                     </div>
                   </div>
                   <FormattedAddress

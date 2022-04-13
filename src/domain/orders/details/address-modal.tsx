@@ -80,6 +80,14 @@ const AddressModal: React.FC<AddressModalProps> = ({
                 placeholder="Phone"
               />
             </div>
+            <div className="flex mt-4 space-x-4">
+              <Input
+                label="GSTIN"
+                name="gstin"
+                ref={register}
+                placeholder="GSTIN"
+              />
+            </div>
           </div>
           <div className="space-y-4 mt-8">
             <span className="inter-base-semibold">Address</span>

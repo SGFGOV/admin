@@ -344,6 +344,12 @@ const OrderDetails = ({ id }) => {
                 </div>
                 <div className="flex flex-col pl-6">
                   <div className="inter-smaller-regular text-grey-50 mb-1">
+                    GSTIN
+                  </div>
+                  <div>{order?.shipping_address?.GSTIN || "N/A"}</div>
+                </div>
+                <div className="flex flex-col pl-6">
+                  <div className="inter-smaller-regular text-grey-50 mb-1">
                     Payment
                   </div>
                   <div>

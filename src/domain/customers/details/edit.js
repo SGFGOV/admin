@@ -33,6 +33,7 @@ const EditCustomerModal = ({ handleClose, customer }) => {
       last_name: customer.last_name || "",
       email: customer.email,
       phone: customer.phone || "",
+      gstin: customer.gstin || "",
     })
   }, [])
 

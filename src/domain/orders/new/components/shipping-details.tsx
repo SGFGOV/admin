@@ -88,6 +88,7 @@ const ShippingDetails = ({
         form.setValue("shipping.last_name", data.customer.last_name)
         form.setValue("shipping.email", data.customer.email)
         form.setValue("shipping.phone", data.customer.phone)
+        form.setValue("shipping.gstin", data.customer.gstin)
         const countries = region.countries.map(({ iso_2 }) => iso_2)
         const inRegion = data.customer.shipping_addresses.filter((sa) =>
           countries.includes(sa.country_code)
